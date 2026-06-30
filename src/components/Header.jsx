@@ -33,7 +33,9 @@ export default function Header() {
               {l.label}
             </NavLink>
           ))}
-          <Link to="/contact" className="btn btn-sheen" onClick={() => setOpen(false)}>Book a demo</Link>
+<Link to="/contact" className="btn btn-ghost" onClick={() => setOpen(false)}>Book a demo</Link>
+<Link to="/signup" className="btn btn-sheen" onClick={() => setOpen(false)}>Get started</Link>
+
         </nav>
         <button className="nav-toggle" aria-label="Menu" onClick={() => setOpen((o) => !o)}>
           {open ? '✕' : '☰'}
