@@ -36,7 +36,6 @@ export default function Header() {
             ))}
           </nav>
           <div className="nav-actions">
-            <a href="https://myhealth.nixxy.ai/signin" className="nav-signin" onClick={() => setOpen(false)}>Sign in</a>
             <Link to="/signup" className="btn btn-cta" onClick={() => setOpen(false)}>Get started <span className="arrow">→</span></Link>
           </div>
         </div>

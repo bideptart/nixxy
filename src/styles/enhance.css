@@ -55,9 +55,7 @@
 @media (max-width: 560px) { .logo-img { height: 34px; } }
 .site-header { transition: background .3s ease, border-color .3s ease, box-shadow .3s ease; border-bottom: 1px solid transparent; background: transparent; }
 .site-header.scrolled { background: rgba(0,0,0,.7); border-bottom-color: var(--border-soft); box-shadow: 0 1px 0 rgba(255,255,255,.02); }
-/* Sign in link + red Get started CTA */
-.nav-signin { font-size: 14px; color: var(--fg-muted); }
-.nav-signin:hover { color: var(--fg); opacity: 1; }
+/* Get started CTA */
 .btn-cta {
   background: linear-gradient(180deg, #45e08c 0%, #20bd69 100%);
   border: 1px solid transparent;
@@ -106,6 +104,8 @@
 /* hero refinements */
 .hero h1 { line-height: 1.02; }
 .hero-note { display: inline-block; }
+/* restore horizontal padding (the .hero shorthand zeroes it) so content isn't flush to edges */
+.hero { padding-left: var(--pad); padding-right: var(--pad); }
 .hero-visual { animation: hero-rise .9s cubic-bezier(.2,.7,.2,1) both; }
 @keyframes hero-rise { from { opacity: 0; transform: translateY(20px) scale(.98); } to { opacity: 1; transform: none; } }
 
@@ -269,4 +269,46 @@
   .marquee-item { font-size: 20px; }
   .steps3 { grid-template-columns: 1fr; }
   .step3:not(:last-child)::after { display: none; }
+}
+
+/* ============================================================
+   RESPONSIVE SAFETY + REFINEMENTS (all devices)
+   ============================================================ */
+/* never allow horizontal scroll */
+html, body { max-width: 100%; overflow-x: hidden; }
+/* let grid/flex children shrink below their content's intrinsic size */
+.grid > *, .hero-split > *, .pricing-grid > *, .signup-layout > *,
+.team-grid > *, .roadmap > *, .steps3 > * { min-width: 0; }
+.card, .call-card, .ie-panel, .quote-card, .price-card,
+.hero .sub, .hero-note, .lead, .prose, .article { max-width: 100%; }
+.call-transcript, .waveform { max-width: 100%; overflow: hidden; }
+
+/* tablet / small laptop */
+@media (max-width: 1024px) {
+  .nav-links { gap: 22px; }
+  .nav-links a { font-size: 13px; }
+}
+
+/* phones */
+@media (max-width: 560px) {
+  :root { --pad: 18px; }
+  .hero { padding-top: clamp(110px, 16vh, 150px); }
+  .hero-split { gap: 28px; }
+  .hero h1 { font-size: clamp(38px, 11vw, 52px); }
+  .hero .sub { font-size: 16px; }
+  .hero-note { font-size: 11px; }
+  .cta-row { width: 100%; }
+  .cta-row .btn { flex: 1; justify-content: center; }
+  .section-head h2, .cta-band h2 { font-size: clamp(26px, 8vw, 34px); }
+  .call-card { padding: 18px; }
+  .bubble { font-size: 12.5px; }
+  .metric-value { font-size: clamp(34px, 11vw, 44px); }
+  .signup-summary .card { position: static; }
+  .footer-bottom { gap: 14px; }
+}
+
+/* very small phones */
+@media (max-width: 380px) {
+  .nav-actions { gap: 8px; }
+  .brand .logo-img { height: 30px; }
 }
