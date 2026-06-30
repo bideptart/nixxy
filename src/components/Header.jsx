@@ -26,17 +26,20 @@ export default function Header() {
         <Link to="/" className="brand" onClick={() => setOpen(false)}>
           <Logo />
         </Link>
-        <nav className="nav">
-          {links.map((l) => (
-            <NavLink key={l.to} to={l.to} onClick={() => setOpen(false)}
-              className={({ isActive }) => (isActive ? 'active' : '')}>
-              {l.label}
-            </NavLink>
-          ))}
-<Link to="/contact" className="btn btn-ghost" onClick={() => setOpen(false)}>Book a demo</Link>
-<Link to="/signup" className="btn btn-sheen" onClick={() => setOpen(false)}>Get started</Link>
-
-        </nav>
+        <div className="nav-menu">
+          <nav className="nav-links">
+            {links.map((l) => (
+              <NavLink key={l.to} to={l.to} onClick={() => setOpen(false)}
+                className={({ isActive }) => (isActive ? 'active' : '')}>
+                {l.label}
+              </NavLink>
+            ))}
+          </nav>
+          <div className="nav-actions">
+            <a href="https://myhealth.nixxy.ai/signin" className="nav-signin" onClick={() => setOpen(false)}>Sign in</a>
+            <Link to="/signup" className="btn btn-cta" onClick={() => setOpen(false)}>Get started <span className="arrow">→</span></Link>
+          </div>
+        </div>
         <button className="nav-toggle" aria-label="Menu" onClick={() => setOpen((o) => !o)}>
           {open ? '✕' : '☰'}
         </button>

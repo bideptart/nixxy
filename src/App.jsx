@@ -10,7 +10,7 @@ import Contact from './pages/Contact.jsx';
 import Privacy from './pages/Privacy.jsx';
 import Terms from './pages/Terms.jsx';
 import NotFound from './pages/NotFound.jsx';
-import Signup from './pages/Signup.jsx';  
+import Signup from './pages/Signup.jsx';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
