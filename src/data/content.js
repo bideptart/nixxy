@@ -151,8 +151,8 @@ export const useCases = [
   },
   {
     tag: '02',
-    title: 'Outbound',
-    desc: 'Run reminder, follow-up, and confirmation calls at scale, then sync the outcome and next steps straight back into your CRM.',
+    title: 'After-hours',
+    desc: 'Cover nights, weekends, and holidays so every caller is answered on the first ring — no voicemail, no missed patients or leads.',
   },
   {
     tag: '03',

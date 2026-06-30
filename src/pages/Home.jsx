@@ -61,7 +61,7 @@ export default function Home() {
       <section className="section container">
         <Reveal className="section-head">
           <p className="eyebrow">Use cases</p>
-          <h2>Inbound, outbound, every language.</h2>
+          <h2>Inbound, after-hours, every language.</h2>
         </Reveal>
         <div className="grid grid-3">
           {useCases.map((u, i) => (
