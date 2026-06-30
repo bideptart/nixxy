@@ -55,6 +55,8 @@
 @media (max-width: 560px) { .logo-img { height: 34px; } }
 .site-header { transition: background .3s ease, border-color .3s ease, box-shadow .3s ease; border-bottom: 1px solid transparent; background: transparent; }
 .site-header.scrolled { background: rgba(0,0,0,.7); border-bottom-color: var(--border-soft); box-shadow: 0 1px 0 rgba(255,255,255,.02); }
+/* keep the filled "Get started" button text black (override nav link color) */
+.site-header .nav a.btn-sheen { color: #000; }
 
 /* buttons — sheen + arrow */
 .btn { position: relative; overflow: hidden; }
