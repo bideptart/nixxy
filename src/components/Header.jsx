@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import Logo from './Logo.jsx';
 
 const links = [
   { to: '/features', label: 'Features' },
@@ -23,7 +24,7 @@ export default function Header() {
     <header className={`site-header${open ? ' open' : ''}${scrolled ? ' scrolled' : ''}`}>
       <div className="container bar">
         <Link to="/" className="brand" onClick={() => setOpen(false)}>
-          <span className="brand-dot" /> NIXXY
+          <Logo />
         </Link>
         <nav className="nav">
           {links.map((l) => (

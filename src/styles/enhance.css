@@ -32,6 +32,18 @@
 /* brand dot + header scroll */
 .brand { display: inline-flex; align-items: center; gap: 9px; }
 .brand-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent-live); box-shadow: 0 0 12px rgba(61,220,132,.8); }
+
+/* AI+ NIXXY logo */
+.logo { display: inline-flex; align-items: center; gap: 10px; letter-spacing: normal; line-height: 1; color: var(--fg); }
+.logo-mark { position: relative; display: inline-flex; align-items: flex-start; }
+.logo-ai { font-family: var(--font-sans); font-weight: 800; font-size: 21px; letter-spacing: -.04em; line-height: 1; }
+.logo-plus { color: var(--accent-live); font-weight: 700; font-size: 12px; line-height: 1; margin: -1px 0 0 1px; text-shadow: 0 0 10px rgba(61,220,132,.6); }
+.logo-wave { position: absolute; left: 1px; bottom: -5px; width: 38px; height: 11px; color: var(--accent-live); filter: drop-shadow(0 0 4px rgba(61,220,132,.5)); }
+.logo-word { font-family: var(--font-mono); font-weight: 400; letter-spacing: .3em; font-size: 17px; padding-left: .3em; }
+/* slightly larger lockup in the footer */
+.footer-brand .logo-ai { font-size: 24px; }
+.footer-brand .logo-word { font-size: 19px; }
+.footer-brand .logo-wave { width: 42px; bottom: -6px; }
 .site-header { transition: background .3s ease, border-color .3s ease, box-shadow .3s ease; border-bottom: 1px solid transparent; background: transparent; }
 .site-header.scrolled { background: rgba(0,0,0,.7); border-bottom-color: var(--border-soft); box-shadow: 0 1px 0 rgba(255,255,255,.02); }
 
