@@ -5,11 +5,7 @@ import Footer from './Footer.jsx';
 export default function Layout() {
   return (
     <>
-      <div className="ambient" aria-hidden="true">
-        <div className="grid-bg" />
-        <div className="glow glow-a" />
-        <div className="glow glow-b" />
-      </div>
+      <div className="ambient" aria-hidden="true" />
       <Header />
       <main>
         <Outlet />
