@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import Reveal from '../components/Reveal.jsx';
 
 // PORTAL_BASE must point at the live NIXXY portal (nginx proxies /api -> :4100).
-const PORTAL_BASE = 'https://voice.nixxy.ai';
+const PORTAL_BASE = 'https://myhealth.nixxy.ai';
 const RESELLER_PORTAL = 'nixxy.ai';
 const DEFAULT_LANGUAGE = 'en-US';
 const PLAN_IDS = ['starter', 'growth', 'scale'];
